@@ -37,7 +37,7 @@ export default function Home() {
   if(nome == null || nome == ''){
     return(
       <View style={styles.container}> 
-          <Text style={styles.titulo}>Digite seu Nome:</Text>
+          <Text style={styles.titulo}>Digite seu nome:</Text>
 
           <TextInput 
             style={styles.input}
@@ -58,7 +58,7 @@ export default function Home() {
 
     <View style={styles.container}>
 
-        <Text style={styles.titulo}>Olá {nome} - Escolha uma opção:</Text>
+        <Text style={styles.titulo}>Olá {nome}, escolha uma opção:</Text>
         
         <TouchableOpacity style={styles.botao}
               onPress={limparNome}
@@ -79,7 +79,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#41E3B6',
   },
   titulo:{
       fontSize:30,
@@ -87,15 +87,20 @@ const styles = StyleSheet.create({
       marginTop:20
   },
   botao:{
-      backgroundColor:'#ccc',
+      backgroundColor:'steelblue',
       marginTop:20,
       width:Dimensions.get('window').width-20,
       marginLeft:10,
-      marginRight:10
+      marginRight:10,
+      borderRadius: 10,
+      width: "80%",
+      alignSelf: 'center',
+      padding: 10
   },
   textoBotao:{
       fontSize:25,
-      textAlign:'center'
+      textAlign:'center',
+      color: "#fff"
   },
   input:{
     width:Dimensions.get('window').width-20,
@@ -104,7 +109,8 @@ const styles = StyleSheet.create({
     borderWidth:1,
     marginLeft:10,
     marginRight:10,
-    fontSize:20
+    fontSize:20,
+    borderRadius: 5
   }
 
 });
